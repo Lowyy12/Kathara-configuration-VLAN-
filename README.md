@@ -22,4 +22,5 @@ Create virtual interfaces
 | --------- |
 | brctl addbr *name_bridge* |
 | brctl addif *name_brdige* **interface**  |
+| brctl addif *name_brdige* **interface_virtual**  |
 | ifconfig *name_brdige* up |
