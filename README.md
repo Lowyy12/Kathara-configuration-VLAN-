@@ -48,7 +48,19 @@ ip link set "name_bridge" up
 ip link set "name_bridge" type bridge vlan_filtering (1 on // 0 off)
 ````
 
-*ALL INTERFACE*
+*WITH ALL INTERFACE*
 ````bash
 ip link set "interface" master "name_bridge"
+````
+
+Each terminal port is associated with the corresponding vlan and defined as untagged and pvid
+
+````bash
+bridge vlan add dev "interface" vid "ID" pvid untagged
+````
+
+Each trunk port is associated with each vlan to which it belongs
+
+````bash
+bridge vlan add dev "interface" vid "ID"
 ````
