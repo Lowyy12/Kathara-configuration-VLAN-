@@ -9,6 +9,13 @@ the configuration of the VLANs, for Kathara laboratories.
 | --------- | --------- |
 | ifconfig **interface** up | ip link set **interface** up |
 
+## Add IP addresses
+
+| IFCONFIG | IP |
+| --------- | --------- |
+| ifconfig **interface** *IP_adress* | ip link add  *IP_adress* dev **interface** |
+| ifconfig **interface_virtual** *IP_adress* | ip link add  *IP_adress* dev **interface_virtual** |
+
 ## Virtual Interfaces
 Create virtual interfaces
 
@@ -24,3 +31,5 @@ Create virtual interfaces
 | brctl addif *name_brdige* **interface**  |
 | brctl addif *name_brdige* **interface_virtual**  |
 | ifconfig *name_brdige* up |
+
+##
