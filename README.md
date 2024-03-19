@@ -44,6 +44,11 @@ ip link set "interface" up
 
 ````bash
 ìp link add "name_bridge" type bridge
-ip link set name_bridge up
-ip link set name_bridge type bridge vlan_filtering (1 on/0 off)
+ip link set "name_bridge" up
+ip link set "name_bridge" type bridge vlan_filtering (1 on // 0 off)
+````
+
+*ALL INTERFACE*
+````bash
+ip link set "interface" master "name_bridge"
 ````
