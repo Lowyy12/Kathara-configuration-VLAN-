@@ -8,6 +8,7 @@ the configuration of the VLANs, for Kathara laboratories.
 | IFCONFIG | IP |
 | --------- | --------- |
 | ifconfig **interface** up | ip link set **interface** up |
+| ifconfig **interface_virtual** up | ip link set **interface_virtual** up |
 
 ## Add IP addresses
 
@@ -17,6 +18,7 @@ the configuration of the VLANs, for Kathara laboratories.
 | ifconfig **interface_virtual** *IP_adress* | ip link add  *IP_adress* dev **interface_virtual** |
 
 ## Virtual Interfaces
+
 Create virtual interfaces
 
 | VCONFIG | IP |
@@ -32,4 +34,16 @@ Create virtual interfaces
 | brctl addif *name_brdige* **interface_virtual**  |
 | ifconfig *name_brdige* up |
 
-##
+## VLAN filtering method
+
+Only with IP command
+
+````bash
+ip link set "interface" up
+````
+
+````bash
+ìp link add "name_bridge" type bridge
+ip link set name_bridge up
+ip link set name_bridge type bridge vlan_filtering (1 on/0 off)
+````
