@@ -2,8 +2,15 @@
 I am going to use this repository for the notes necessary to understand 
 the configuration of the VLANs, for Kathara laboratories.
 
-## Physical interfaces
+## Physical Interfaces
 
 | IFCONFIG | IP |
 | --------- | --------- |
-| ifconfig <interface> up | ip link set <interface> up |
+| ifconfig **<interface>** up | ip link set **<interface>** up |
+
+## Virtual Interfaces
+Create virtual interfaces
+
+| VCONFIG | IP |
+| --------- | --------- |
+| vconfig add <interface> <ID> | ip link add link **<interface>** name **<interface>**.**<ID>** type vlan id **<ID>**|
