@@ -6,11 +6,11 @@ the configuration of the VLANs, for Kathara laboratories.
 
 | IFCONFIG | IP |
 | --------- | --------- |
-| ifconfig **<interface>** up | ip link set **<interface>** up |
+| ifconfig **interface** up | ip link set **interface** up |
 
 ## Virtual Interfaces
 Create virtual interfaces
 
 | VCONFIG | IP |
 | --------- | --------- |
-| vconfig add **interface** **ID** | ip link add link <interface> name <interface>.<ID> type vlan id <ID>|
+| vconfig add **interface** **ID** | ip link add link **interface** name **interface**.**ID** type vlan id **Id**|
