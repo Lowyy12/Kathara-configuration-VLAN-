@@ -13,4 +13,4 @@ Create virtual interfaces
 
 | VCONFIG | IP |
 | --------- | --------- |
-| vconfig add <interface> <ID> | ip link add link **<interface>** name **<interface>**.**<ID>** type vlan id **<ID>**|
+| vconfig add <interface> <ID> | ip link add link *<interface>* name **<interface>**.**<ID>** type vlan id **<ID>**|
