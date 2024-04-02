@@ -53,7 +53,7 @@ ip link set "name_bridge" type bridge vlan_filtering (1 on // 0 off)
 ip link set "interface" master "name_bridge"
 ````
 
-Cada puerto de terminal está asociado con la VLAN correspondiente y se define como sin etiquetar y pvid.
+Cada puerto de terminal está asociado con la VLAN correspondiente y se define como "sin etiquetar" y pvid.
 
 ````bash
 bridge vlan add dev "interface" vid "ID" pvid untagged
